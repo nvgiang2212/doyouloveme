@@ -3,21 +3,27 @@
 <head>
 	<title>Do You Love Me</title>
 </head>
-<body>
+<body style="position: relative; width: 500px; height: 300px;">
 	<h1 style="position:absolute; left:220px; top:175px;">Do You Love Me ?</h1>
 	<input type="button" value=" YES " onclick="yesClick()" style="position:absolute; left:285px; top:255px;">
-	<input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position:absolute; left:360px; top:255px;">
+	<input type="button" id="btnNo" value="  NO  " onmouseover="noClick()" style="position:absolute; left:360px; top:255px;">
 
 	<script>
 		function yesClick() {
-			alert("Yes, I luv you");
+			alert('I____LUV___YOU');
 		}
 
-		function noHover() {
-			let x = Math.round(Math.random() * window.innerWidth);
-			let y = Math.round(Math.random() * window.innerHeight);
-			document.getElementById('btnNo').style.left = x + 'px';
-			document.getElementById('btnNo').style.top = y + 'px';
+		function noClick() {
+			// set toa do a va b trong khuon kho man hinh
+			let a = window.innerHeight * Math.random();
+			let b = window.innerWidth * Math.random();
+
+			alert(a);
+
+			// gan gia tri left va top 1 toa do bat ky
+			document.getElementById('btnNo').style.left = a + 'px';
+			document.getElementById('btnNo').style.top = b + 'px';
+
 		}
 	</script>
 </body>
